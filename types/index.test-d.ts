@@ -11,4 +11,4 @@ expectType<string>(opts.message)
 expectType<string>(opts.name)
 
 expectType<void>(warning.emit('CODE'))
-expectType<{ [key: string]: true }>(warning.emitted)
+expectType<{ [key: string]: boolean }>(warning.emitted)

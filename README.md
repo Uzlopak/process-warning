@@ -59,9 +59,9 @@ The module also exports an `warning.emitted` Object, which contains all the warn
 ```js
 const warning = require('process-warning')()
 warning.create('FastifyWarning', 'FST_ERROR_CODE', 'Hello %s')
-console.log('FST_ERROR_CODE' in warning.emitted) // false
+console.log(warning.emitted.FST_ERROR_CODE) // false
 warning.emit('FST_ERROR_CODE', 'world')
-console.log('FST_ERROR_CODE' in warning.emitted) // true
+console.log(warning.emitted.FST_ERROR_CODE) // true
 ```
 
 ## License
