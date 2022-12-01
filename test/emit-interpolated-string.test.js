@@ -12,7 +12,7 @@ test('emit with interpolated string', t => {
     t.equal(warning.name, 'FastifyDeprecation')
     t.equal(warning.code, 'CODE')
     t.equal(warning.message, 'Hello world')
-    t.ok(emitted.has('CODE'))
+    t.ok('CODE' in emitted)
   }
 
   create('FastifyDeprecation', 'CODE', 'Hello %s')
